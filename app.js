@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var indexRouter = require('./routes/mydata');
+var mydataRouter = require('./routes/mydata');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -40,8 +40,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000,function(){
+/* app.listen(3000,function(){
   console.log("server is running on local host : 3000");
-});
+}); */
 
 module.exports = app;
